@@ -18,9 +18,9 @@ int createTodo(Todolist *t){
     printf("할 일은? : ");
     scanf(" %d", t->list);
     printf("시간은? : ");
-    scanf(" %d", &p->time);
+    scanf(" %d", &t->time);
     printf("우선순위는? : ");
-    scanf(" %d", &p->priority);
+    scanf(" %d", &t->priority);
     printf("=> 저장되었습니다.\n");
     return 1; 
 }
@@ -33,9 +33,9 @@ int updateTodo(Todolist *t){
     printf("할 일은? : ");
     scanf(" %d", t->list);
     printf("시간은? : ");
-    scanf(" %d", &p->time);
+    scanf(" %d", &t->time);
     printf("우선순위는? : ");
-    scanf(" %d", &p->priority);
+    scanf(" %d", &t->priority);
     printf("=> 저장되었습니다.\n");
     return 1; 
 }
