@@ -10,6 +10,10 @@ typedef struct todolist{
     int priority;
 } Todolist;
 
+void readTodo(Todolist t){
+    printf("%4d %4s %4s %4d %4d", t.user, t.name, t.list, t.time, t.priority);
+}
+
 int createTodo(Todolist *t){
     printf("사용자(PIN) : ");
     scanf(" %d", &t->user);
@@ -38,4 +42,13 @@ int updateTodo(Todolist *t){
     scanf(" %d", &t->priority);
     printf("=> 저장되었습니다.\n");
     return 1; 
+}
+
+int deleteTodo(Todolist *t){
+    t->user = -1;
+    t->name = -1;
+    t->list = -1;
+    t->time = -1;
+    t->priority = -1;
+    return 1;
 }
