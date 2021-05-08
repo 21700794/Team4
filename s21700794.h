@@ -46,8 +46,8 @@ int updateTodo(Todolist *t){
 
 int deleteTodo(Todolist *t){
     t->user = -1;
-    t->name = -1;
-    t->list = -1;
+//    t->name = -1;
+//    t->list = -1;
     t->time = -1;
     t->priority = -1;
     return 1;
