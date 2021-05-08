@@ -9,7 +9,7 @@
 
 void readTodo(Todolist t)
 {
-    printf("%4d %4s %4s %4d %4d", t.user, t.name, t.list, t.time, t.priority);
+    printf("%4d %4s %4s %4d %4d\n", t.user, t.name, t.list, t.time, t.priority);
 }
 
 void Allreadtodo(Todolist *t)
