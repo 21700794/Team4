@@ -41,15 +41,9 @@ int main()
                 if(menu_num == 0) break;
                 if(menu_num == 1) {
                         if(count > 0) Allreadtodo(todo);
-                        else printf("=> 데이터가 없습니다.\n");
+                        else printf("데이터를 먼저 추가해주세요! \n");
                     }
-                if(menu_num == 2) {
-                    if(count == 0){
-                            printf("데이터를 먼저 추가해주세요! \n");
-                            continue;
-                    }
-                    count+=createTodo(&todo[index++]);
-                }
+                if(menu_num == 2) count+=createTodo(&todo[index++]);
                 if(menu_num == 3) {
                     no = selectDataNo(todo, index);
                         if(no == 0) {
