@@ -19,3 +19,5 @@ int createTodo(Todolist *t);
 int updateTodo(Todolist *t);
 
 int deleteTodo(Todolist *t);
+
+int selectDataNo(Todolist *t, int index);
