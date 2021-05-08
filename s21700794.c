@@ -12,7 +12,7 @@ void readTodo(Todolist t)
     printf("%4d %4s %4s %4d %4d", t.user, t.name, t.list, t.time, t.priority);
 }
 
-void Allreadtodo(Todolist * t)
+void Allreadtodo(Todolist *t)
 {
     for(int i =0; i<SIZE; i++)
     {
@@ -23,32 +23,32 @@ void Allreadtodo(Todolist * t)
 
 
 int createTodo(Todolist *t){
-    printf("»ç¿ëÀÚ(PIN) : ");
+    printf("ì‚¬ìš©ìž(PIN) : ");
     scanf(" %d", &t->user);
-    printf("»ç¿ëÀÚ(username) : ");
+    printf("ì‚¬ìš©ìž(username) : ");
     scanf(" %s", t->name);
-    printf("ÇÒ ÀÏÀº? : ");
+    printf("í•  ì¼ì€? : ");
     scanf(" %s", t->list);
-    printf("½Ã°£Àº? : ");
+    printf("ì‹œê°„ì€? : ");
     scanf(" %d", &t->time);
-    printf("¿ì¼±¼øÀ§´Â? : ");
+    printf("ìš°ì„ ìˆœìœ„ëŠ”? : ");
     scanf(" %d", &t->priority);
-    printf("=> ÀúÀåµÇ¾ú½À´Ï´Ù.\n");
+    printf("=> ì €ìž¥ë˜ì—ˆìŠµë‹ˆë‹¤.\n");
     return 1; 
 }
 
 int updateTodo(Todolist *t){
-    printf("»ç¿ëÀÚ(PIN) : ");
+    printf("ì‚¬ìš©ìž(PIN) : ");
     scanf(" %d", &t->user);
-    printf("»ç¿ëÀÚ(username) : ");
+    printf("ì‚¬ìš©ìž(username) : ");
     scanf(" %d", t->name);
-    printf("ÇÒ ÀÏÀº? : ");
+    printf("í•  ì¼ì€? : ");
     scanf(" %d", t->list);
-    printf("½Ã°£Àº? : ");
+    printf("ì‹œê°„ì€? : ");
     scanf(" %d", &t->time);
-    printf("¿ì¼±¼øÀ§´Â? : ");
+    printf("ìš°ì„ ìˆœìœ„ëŠ”? : ");
     scanf(" %d", &t->priority);
-    printf("=> ÀúÀåµÇ¾ú½À´Ï´Ù.\n");
+    printf("=> ì €ìž¥ë˜ì—ˆìŠµë‹ˆë‹¤.\n");
     return 1; 
 }
 
@@ -59,4 +59,13 @@ int deleteTodo(Todolist *t){
     t->time = -1;
     t->priority = -1;
     return 1;
+}
+
+int selectDataNo(Todolist *t, int index)
+{
+	int no;
+	Allreadtodo(t, index);
+	printf("\në²ˆí˜¸ëŠ” (ì·¨ì†Œ: 0)?");
+	scanf(" %d", &no);
+	return no;
 }
