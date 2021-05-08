@@ -7,9 +7,10 @@
 int main()
 {
     Todolist todo[SIZE];  
-    int count;
+    int count, no;
     int menu_num;
-    count =0;
+    count = 0, no = 0;
+    
 
 
         memset(todo, -1, sizeof(todo));
@@ -25,12 +26,12 @@ int main()
                 printf("count : %d \n", count);
                 #endif
 
-                printf("µ¥ÀÌÅÍ ºÒ·¯¿À±â ¿Ï·á\n");
+                printf("ë°ì´í„° ë¶ˆëŸ¬ì˜¤ê¸° ì™„ë£Œ\n");
                 readAll(fruit);
         }
         else{
                 #ifdef DEBUG
-                        printf("½ÇÇà??");
+                        printf("ì‹¤í–‰??");
                 #endif
         }
 
@@ -38,14 +39,36 @@ int main()
         do{
                 menu_num = menu();
                 if(menu_num == 0) break;
-                if(menu_num == 2) count+=createTodo(todo);
-                if(count == 0){
-                        printf("µ¥ÀÌÅÍ¸¦ ¸ÕÀú Ãß°¡ÇØÁÖ¼¼¿ä! \n");
-                        continue;
+                if(menu_num == 1) {
+                        if(count > 0) Allreadtodo(todo);
+                        else printf("=> ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.\n");
+                    }
+                if(menu_num == 2) {
+                    if(count == 0){
+                            printf("ë°ì´í„°ë¥¼ ë¨¼ì € ì¶”ê°€í•´ì£¼ì„¸ìš”! \n");
+                            continue;
+                    }
+                    count+=createTodo(&todo[index++]);
                 }
-                if(menu_num == 1) Allreadtodo(todo);
-                if(menu_num == 3) updateTodo(todo);
-                if(menu_num == 4) count-= deleteTodo(todo);
+                if(menu_num == 3) {
+                    no = selectDataNo(todo, index);
+                        if(no == 0) {
+                            printf("ì·¨ì†Œë¨\n");
+                            continue;
+                        }
+                    updateTodo(&todo[no-1]);
+                }
+                if(menu_num == 4) {
+                    no = selectDataNo(todo, index);
+                        if(no == 0) {
+                            printf("ì·¨ì†Œë¨\n");
+                            continue;
+                        }
+                    if(deleteTodo(&todo[no-1])){
+                        printf("ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.\n");
+                        count--;
+                    }
+                }
         }while(1);
 
         return 0;
