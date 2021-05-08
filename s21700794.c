@@ -41,9 +41,9 @@ int updateTodo(Todolist *t){
     printf("사용자(PIN) : ");
     scanf(" %d", &t->user);
     printf("사용자(username) : ");
-    scanf(" %d", t->name);
+    scanf(" %s", t->name);
     printf("할 일은? : ");
-    scanf(" %d", t->list);
+    scanf(" %s", t->list);
     printf("시간은? : ");
     scanf(" %d", &t->time);
     printf("우선순위는? : ");
