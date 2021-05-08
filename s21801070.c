@@ -4,16 +4,16 @@
 int menu(){
         int num;
         printf("\n*** Todolist ***\n");
-        printf("1. ì¡°íšŒ\n");
-        printf("2. ì¶”ê°€\n");
-        printf("3. ìˆ˜ì •\n");
-        printf("4. ì‚­ì œ\n");
-        //printf("5. íŒŒì¼ ì €ì¥\n");
-        //printf("6. ì´ë¦„ìœ¼ë¡œ ê²€ìƒ‰\n");
-        //printf("7. ë³„ì ìœ¼ë¡œ ê²€ìƒ‰\n");
-        //printf("8. ê°€ê²©ìœ¼ë¡œ ê²€ìƒ‰\n");
-        printf("0. ì¢…ë£Œ\n\n");
-        printf("=> ì›í•˜ëŠ” ë©”ë‰´ëŠ”? ");
+        printf("1. Á¶È¸\n");
+        printf("2. Ãß°¡\n");
+        printf("3. ¼öÁ¤\n");
+        printf("4. »èÁ¦\n");
+        //printf("5. ÆÄÀÏ ÀúÀå\n");
+        //printf("6. ÀÌ¸§À¸·Î °Ë»ö\n");
+        //printf("7. º°Á¡À¸·Î °Ë»ö\n");
+        //printf("8. °¡°İÀ¸·Î °Ë»ö\n");
+        printf("0. Á¾·á\n\n");
+        printf("=> ¿øÇÏ´Â ¸Ş´º´Â? ");
         scanf("%d", &num);
 
         return num;

@@ -12,6 +12,8 @@ int main()
     count =0;
 
 
+        memset(todo, -1, sizeof(todo));
+
      #ifdef DEBUG
                         printf("\n\n======================== DEBUGMODE => helloworld!!===================\n\n \n");
      #endif
@@ -23,12 +25,12 @@ int main()
                 printf("count : %d \n", count);
                 #endif
 
-                printf("Îç∞Ïù¥ÌÑ∞ Î∂àÎü¨Ïò§Í∏∞ ÏôÑÎ£å\n");
+                printf("µ•¿Ã≈Õ ∫“∑Øø¿±‚ øœ∑·\n");
                 readAll(fruit);
         }
         else{
                 #ifdef DEBUG
-                        printf("Ïã§Ìñâ??");
+                        printf("Ω««‡??");
                 #endif
         }
 
@@ -38,7 +40,7 @@ int main()
                 if(menu_num == 0) break;
                 if(menu_num == 2) count+=createTodo(todo);
                 if(count == 0){
-                        printf("Îç∞Ïù¥ÌÑ∞Î•º Î®ºÏ†Ä Ï∂îÍ∞ÄÌï¥Ï£ºÏÑ∏Ïöî! \n");
+                        printf("µ•¿Ã≈Õ∏¶ ∏’¿˙ √ﬂ∞°«ÿ¡÷ººø‰! \n");
                         continue;
                 }
                 if(menu_num == 1) Allreadtodo(todo);
