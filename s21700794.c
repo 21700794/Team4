@@ -64,7 +64,7 @@ int deleteTodo(Todolist *t){
 int selectDataNo(Todolist *t, int index)
 {
 	int no;
-	Allreadtodo(t, index);
+	Allreadtodo(t);
 	printf("\n번호는 (취소: 0)?");
 	scanf(" %d", &no);
 	return no;
