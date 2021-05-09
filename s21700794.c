@@ -1,8 +1,5 @@
 #include "s21700794.h"
 #include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include"s21801070.h"
 
 #define SIZE 30
 
@@ -69,22 +66,4 @@ int selectDataNo(Todolist *t, int index)
 	printf("\n번호는 (취소: 0)?");
 	scanf(" %d", &no);
 	return no;
-}
-
-int menu(){
-        int num;
-        printf("\n*** Todolist ***\n");
-        printf("1. 조회\n");
-        printf("2. 추가\n");
-        printf("3. 수정\n");
-        printf("4. 삭제\n");
-        //printf("5. 파일 저장\n");
-        //printf("6. 이름으로 검색\n");
-        //printf("7. 별점으로 검색\n");
-        //printf("8. 가격으로 검색\n");
-        printf("0. 종료\n\n");
-        printf("=> 원하는 메뉴는? ");
-        scanf("%d", &num);
-
-        return num;
 }
