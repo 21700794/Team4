@@ -4,6 +4,10 @@
 #include<stdio.h>
 
 int menu(); // menu driven
-
+int fileopen();
+int fileread(Todolist * list);
+void writefile(Todolist * list);
+int searchuserid(Todolist * list);
+int searchprior(Todolist * list);
 
 #endif
