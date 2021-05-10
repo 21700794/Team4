@@ -13,11 +13,7 @@ int main()
     
 
 
-        memset(todo, -1, sizeof(todo));
-
-     #ifdef DEBUG
-                        printf("\n\n======================== DEBUGMODE => helloworld!!===================\n\n \n");
-     #endif
+     memset(todo, -1, sizeof(todo));
 
  /*    if(LoadFile())
         {

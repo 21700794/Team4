@@ -1,3 +1,6 @@
+#ifndef __s21700794__
+#define __s21700794__
+
 #include <stdio.h>
 #include <string.h>
 
@@ -8,7 +11,7 @@ typedef struct todolist{
     char list[100];
     int time;
     int priority;
-} Todolist;
+}Todolist;
 
 void readTodo(Todolist t);
 
@@ -21,3 +24,5 @@ int updateTodo(Todolist *t);
 int deleteTodo(Todolist *t);
 
 int selectDataNo(Todolist *t, int index);
+
+#endif

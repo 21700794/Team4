@@ -21,10 +21,6 @@ int menu(){
         return num;
 }
 
-int search(Todolist * list)
-{
-
-}
 
 int searchuserid(Todolist * list)
 {
