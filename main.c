@@ -1,6 +1,6 @@
 #include<stdio.h>
-#include"s21801070.c"
-#include"s21700794.c"
+#include"s21801070.h"
+#include"s21700794.h"
 
 #define SIZE 30
 
