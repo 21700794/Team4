@@ -1,4 +1,7 @@
 #include "s21801070.h"
+#include<stdio.h>
+
+#define SIZE 30
 
 int menu(){
         int num;
@@ -17,3 +20,22 @@ int menu(){
 
         return num;
 }
+
+int search(Todolist * list)
+{
+
+}
+
+int searchuserid(Todolist * list)
+{
+        Allreadtodo(list);
+
+        int uid;
+        printf("찾으실 userid를 입력해주세요");
+        scanf("%d", &uid);
+        
+        for(int i =0; i<SIZE; i++)
+                if(list[i].user == uid)
+                        readTodo(list[i]);
+}
+
