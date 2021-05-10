@@ -59,6 +59,8 @@ int main()
                         count--;
                     }
                 }
+                if(menu_num == 7)
+                    searchuserid(todo);            
         }while(1);
 
         return 0;
