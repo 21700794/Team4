@@ -40,3 +40,22 @@ int searchuserid(Todolist * list)
         return 1;
 }
 
+int searchprior(Todolist * list)
+{
+        Allreadtodo(list);
+
+        int prior;
+        int undo;
+
+        printf("찾으실 우선순위를 입력해주세요");
+        scanf("%d", &prior);
+        printf("취소하시고 싶으면 0을 눌러주세요!");
+        scanf("%d", &undo);
+        if(undo == 0)
+                return 0;
+        for(int i =0; i<SIZE; i++)
+                if(list[i].priority == prior)
+                        readTodo(list[i]);
+        
+        return 1;
+}
