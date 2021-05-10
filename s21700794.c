@@ -1,5 +1,5 @@
 #include "s21700794.h"
-#include<stdio.h>
+#include <stdio.h>
 
 #define SIZE 30
 
@@ -20,7 +20,8 @@ void Allreadtodo(Todolist *t)
 }
 
 
-int createTodo(Todolist *t){
+int createTodo(Todolist *t)
+{
     printf("사용자(PIN) : ");
     scanf(" %d", &t->user);
     printf("사용자(username) : ");
@@ -35,7 +36,8 @@ int createTodo(Todolist *t){
     return 1; 
 }
 
-int updateTodo(Todolist *t){
+int updateTodo(Todolist *t)
+{
     printf("사용자(PIN) : ");
     scanf(" %d", &t->user);
     printf("사용자(username) : ");
@@ -50,7 +52,8 @@ int updateTodo(Todolist *t){
     return 1; 
 }
 
-int deleteTodo(Todolist *t){
+int deleteTodo(Todolist *t)
+{
     t->user = -1;
 //    t->name = -1;
 //    t->list = -1;
