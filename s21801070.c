@@ -12,7 +12,7 @@ int menu(){
         //printf("5. 파일 저장\n");
         //printf("6. 이름으로 검색\n");
         printf("7. uid로 검색\n");
-        //printf("8. 가격으로 검색\n");
+        printf("8. 우선순위로 검색\n");
         printf("0. 종료\n\n");
         printf("=> 원하는 메뉴는? ");
         scanf("%d", &num);

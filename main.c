@@ -60,7 +60,9 @@ int main()
                     }
                 }
                 if(menu_num == 7)
-                    searchuserid(todo);            
+                    searchuserid(todo);
+                if(menu_num == 8)
+                    searchprior(todo);               
         }while(1);
 
         return 0;
