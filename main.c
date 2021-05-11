@@ -59,6 +59,8 @@ int main()
                         count--;
                     }
                 }
+//                 if(menu_num == 5) writefile(todo, index);
+//                 if(menu_num == 6) searchname(todo);
                 if(menu_num == 7)
                     searchuserid(todo);
                 if(menu_num == 8)
