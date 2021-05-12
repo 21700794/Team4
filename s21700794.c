@@ -1,5 +1,5 @@
-#include "s21700794.h"
 #include <stdio.h>
+#include "s21700794.h"
 
 #define SIZE 30
 
@@ -70,3 +70,4 @@ int selectDataNo(Todolist *t, int index)
 	scanf(" %d", &no);
 	return no;
 }
+

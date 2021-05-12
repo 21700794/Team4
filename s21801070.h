@@ -5,7 +5,7 @@
 #include "s21700794.h"
 
 int menu(); // menu driven
-int fileopen();
+int fileopen(int BOOL);
 int fileread(Todolist * list);
 void writefile(Todolist * list);
 int searchuserid(Todolist * list);
