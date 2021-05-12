@@ -9,25 +9,27 @@ int main()
     Todolist todo[SIZE];  
     int count, no, index;
     int menu_num;
+    int flag=0; // fileopenÀ» ÇÑ ¹ø ½ÃÅ³ ¶§ Ã³À½ ºÎ¸£´Â °ÍÀ» È®ÀÎÇÏ±â À§ÇÑ º¯¼ö
     count = 0, no = 0, index = 0;
     
-
+    fileopen(flag);
+    flag=1;
 
      memset(todo, -1, sizeof(todo));
 
- /*    if(LoadFile()) ì´ê±° í•„ìš”ì—†ì–´ ë³´ì´ëŠ”ë° ì—†ì• ë„ ë ê¹Œìš”??
+ /*    if(LoadFile()) ÀÌ°Å ÇÊ¿ä¾ø¾î º¸ÀÌ´Âµ¥ ¾ø¾Öµµ µÉ±î¿ä??
         {
                 count = ReadFile(fruit);
                 #ifdef DEBUG
                 printf("count : %d \n", count);
                 #endif
 
-                printf("ë°ì´í„° ë¶ˆëŸ¬ì˜¤ê¸° ì™„ë£Œ\n");
+                printf("µ¥ÀÌÅÍ ºÒ·¯¿À±â ¿Ï·á\n");
                 readAll(fruit);
         }
         else{
                 #ifdef DEBUG
-                        printf("ì‹¤í–‰??");
+                        printf("½ÇÇà??");
                 #endif
         }
 
@@ -37,13 +39,13 @@ int main()
                 if(menu_num == 0) break;
                 if(menu_num == 1) {
                         if(count > 0) Allreadtodo(todo);
-                        else printf("=> ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.\n");
+                        else printf("=> µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.\n");
                     }
                 if(menu_num == 2) count+=createTodo(&todo[index++]);
                 if(menu_num == 3) {
                     no = selectDataNo(todo, index);
                         if(no == 0) {
-                            printf("ì·¨ì†Œë¨\n");
+                            printf("Ãë¼ÒµÊ\n");
                             continue;
                         }
                     updateTodo(&todo[no-1]);
@@ -51,11 +53,11 @@ int main()
                 if(menu_num == 4) {
                     no = selectDataNo(todo, index);
                         if(no == 0) {
-                            printf("ì·¨ì†Œë¨\n");
+                            printf("Ãë¼ÒµÊ\n");
                             continue;
                         }
                     if(deleteTodo(&todo[no-1])){
-                        printf("ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.\n");
+                        printf("»èÁ¦µÇ¾ú½À´Ï´Ù.\n");
                         count--;
                     }
                 }
