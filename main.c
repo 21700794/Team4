@@ -15,7 +15,7 @@ int main()
 
      memset(todo, -1, sizeof(todo));
 
- /*    if(LoadFile())
+ /*    if(LoadFile()) 이거 필요없어 보이는데 없애도 될까요??
         {
                 count = ReadFile(fruit);
                 #ifdef DEBUG
