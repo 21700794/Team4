@@ -9,7 +9,7 @@ int main()
     Todolist todo[SIZE];  
     int count, no, index;
     int menu_num;
-    int flag=0; // fileopenÀ» ÇÑ ¹ø ½ÃÅ³ ¶§ Ã³À½ ºÎ¸£´Â °ÍÀ» È®ÀÎÇÏ±â À§ÇÑ º¯¼ö
+    int flag=0; // fileopenì„ í•œ ë²ˆ ì‹œí‚¬ ë•Œ ì²˜ìŒ ë¶€ë¥´ëŠ” ê²ƒì„ í™•ì¸í•˜ê¸° ìœ„í•œ ë³€ìˆ˜
     count = 0, no = 0, index = 0;
     
     fileopen(flag);
@@ -17,19 +17,19 @@ int main()
 
      memset(todo, -1, sizeof(todo));
 
- /*    if(LoadFile()) ÀÌ°Å ÇÊ¿ä¾ø¾î º¸ÀÌ´Âµ¥ ¾ø¾Öµµ µÉ±î¿ä??
+ /*    if(LoadFile()) ì´ê±° í•„ìš”ì—†ì–´ ë³´ì´ëŠ”ë° ì—†ì• ë„ ë ê¹Œìš”??
         {
                 count = ReadFile(fruit);
                 #ifdef DEBUG
                 printf("count : %d \n", count);
                 #endif
 
-                printf("µ¥ÀÌÅÍ ºÒ·¯¿À±â ¿Ï·á\n");
+                printf("ë°ì´í„° ë¶ˆëŸ¬ì˜¤ê¸° ì™„ë£Œ\n");
                 readAll(fruit);
         }
         else{
                 #ifdef DEBUG
-                        printf("½ÇÇà??");
+                        printf("ì‹¤í–‰??");
                 #endif
         }
 
@@ -39,13 +39,13 @@ int main()
                 if(menu_num == 0) break;
                 if(menu_num == 1) {
                         if(count > 0) Allreadtodo(todo);
-                        else printf("=> µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.\n");
+                        else printf("=> ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.\n");
                     }
                 if(menu_num == 2) count+=createTodo(&todo[index++]);
                 if(menu_num == 3) {
                     no = selectDataNo(todo, index);
                         if(no == 0) {
-                            printf("Ãë¼ÒµÊ\n");
+                            printf("ì·¨ì†Œë¨\n");
                             continue;
                         }
                     updateTodo(&todo[no-1]);
@@ -53,11 +53,11 @@ int main()
                 if(menu_num == 4) {
                     no = selectDataNo(todo, index);
                         if(no == 0) {
-                            printf("Ãë¼ÒµÊ\n");
+                            printf("ì·¨ì†Œë¨\n");
                             continue;
                         }
                     if(deleteTodo(&todo[no-1])){
-                        printf("»èÁ¦µÇ¾ú½À´Ï´Ù.\n");
+                        printf("ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.\n");
                         count--;
                     }
                 }

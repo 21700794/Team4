@@ -8,7 +8,7 @@ FILE* subfile(char * filename)
         printf("%s", filename);
         FILE * fp = fopen(filename, "rt");
         if(fp == NULL)
-                printf("ÇØ´ç ÆÄÀÏ ¾ø½À´Ï´Ù");
+                printf("í•´ë‹¹ íŒŒì¼ ì—†ìŠµë‹ˆë‹¤");
                 
         return fp;
 }
@@ -19,7 +19,7 @@ int fileopen(int BOOL){
         int sid;
         if(BOOL != 0)
         {
-                printf("¿øÇÏ½Ã´Â ¹®¼­ ¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä!");
+                printf("ì›í•˜ì‹œëŠ” ë¬¸ì„œ ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”!");
                 scanf("%d", &sid);
                 sprintf(ch, "%d", sid);
         }
@@ -33,15 +33,15 @@ int fileopen(int BOOL){
 int menu(){
         int num;
         printf("\n*** Todolist ***\n");
-        printf("1. Á¶È¸\n");
-        printf("2. Ãß°¡\n");
-        printf("3. ¼öÁ¤\n");
-        printf("4. »èÁ¦\n");
-        //printf("5. ÆÄÀÏ ÀúÀå\n");
-        printf("7. uid·Î °Ë»ö\n");
-        printf("8. ¿ì¼±¼øÀ§·Î °Ë»ö\n");
-        printf("0. Á¾·á\n\n");
-        printf("=> ¿øÇÏ´Â ¸Ş´º´Â? ");
+        printf("1. ì¡°íšŒ\n");
+        printf("2. ì¶”ê°€\n");
+        printf("3. ìˆ˜ì •\n");
+        printf("4. ì‚­ì œ\n");
+        //printf("5. íŒŒì¼ ì €ì¥\n");
+        printf("7. uidë¡œ ê²€ìƒ‰\n");
+        printf("8. ìš°ì„ ìˆœìœ„ë¡œ ê²€ìƒ‰\n");
+        printf("0. ì¢…ë£Œ\n\n");
+        printf("=> ì›í•˜ëŠ” ë©”ë‰´ëŠ”? ");
         scanf("%d", &num);
 
         return num;
@@ -54,9 +54,9 @@ int searchuserid(Todolist * list)
 
         int uid;
         int undo;
-        printf("Ã£À¸½Ç userid¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+        printf("ì°¾ìœ¼ì‹¤ useridë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
         scanf("%d", &uid);
-        printf("Ãë¼ÒÇÏ½Ã°í ½ÍÀ¸¸é 0À» ´­·¯ÁÖ¼¼¿ä!");
+        printf("ì·¨ì†Œí•˜ì‹œê³  ì‹¶ìœ¼ë©´ 0ì„ ëˆŒëŸ¬ì£¼ì„¸ìš”!");
         scanf("%d", &undo);
         if(undo == 0)
                 return 0;
@@ -74,9 +74,9 @@ int searchprior(Todolist * list)
         int prior;
         int undo;
 
-        printf("Ã£À¸½Ç ¿ì¼±¼øÀ§¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+        printf("ì°¾ìœ¼ì‹¤ ìš°ì„ ìˆœìœ„ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
         scanf("%d", &prior);
-        printf("Ãë¼ÒÇÏ½Ã°í ½ÍÀ¸¸é 0À» ´­·¯ÁÖ¼¼¿ä!");
+        printf("ì·¨ì†Œí•˜ì‹œê³  ì‹¶ìœ¼ë©´ 0ì„ ëˆŒëŸ¬ì£¼ì„¸ìš”!");
         scanf("%d", &undo);
         if(undo == 0)
                 return 0;
