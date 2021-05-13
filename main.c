@@ -12,11 +12,12 @@ int main()
     int flag=0; // fileopen을 한 번 시킬 때 처음 부르는 것을 확인하기 위한 변수
     count = 0, no = 0, index = 0;
     
-    fileopen(flag);
-    flag=1;
-
      memset(todo, -1, sizeof(todo));
-
+   
+    if(fileopen(flag))
+        count = fileread(todo);
+    
+    flag=1;
  /*    if(LoadFile()) 이거 필요없어 보이는데 없애도 될까요??
         {
                 count = ReadFile(fruit);

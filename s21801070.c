@@ -29,6 +29,20 @@ int fileopen(int BOOL){
         else return 1;
 }
 
+int fileread(Todolist * list)
+{
+        int count = 0; // 몇개 입력됐는지 return
+        FILE * fp = fopen("whole.txt", "rt");
+        while(1)
+        {
+                fscanf(fp, "%s %d %d %d %[^\n]s ", list[count].name, &list[count].user, &list[count].time, &list[count].priority, list[count].list);
+                if(feof(fp))
+                        break;
+                count+=1;
+        }
+        return count;
+}
+
 
 int menu(){
         int num;
