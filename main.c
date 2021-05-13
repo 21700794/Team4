@@ -18,21 +18,11 @@ int main()
         count = fileread(todo);
     
     flag=1;
- /*    if(LoadFile()) 이거 필요없어 보이는데 없애도 될까요??
-        {
-                count = ReadFile(fruit);
-                #ifdef DEBUG
-                printf("count : %d \n", count);
-                #endif
-
-                printf("데이터 불러오기 완료\n");
-                readAll(fruit);
-        }
-        else{
-                #ifdef DEBUG
-                        printf("실행??");
-                #endif
-        }
+ /*    
+       
+    #ifdef DEBUG
+            printf("실행??");
+    #endif
 
 */
         do{
