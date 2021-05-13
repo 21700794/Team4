@@ -38,6 +38,7 @@ int menu(){
         printf("3. 수정\n");
         printf("4. 삭제\n");
         //printf("5. 파일 저장\n");
+        //printf("내 데이터 저장")
         printf("7. uid로 검색\n");
         printf("8. 우선순위로 검색\n");
         printf("0. 종료\n\n");
