@@ -15,8 +15,8 @@ int main()
      memset(todo, -1, sizeof(todo));
    
     if(fileopen(flag))
-        count = fileread(todo);
-    
+        index = count = fileread(todo);
+    //printf("%d %d\n", index, count);
     flag=1;
  /*    
        
@@ -52,7 +52,7 @@ int main()
                         count--;
                     }
                 }
-//                 if(menu_num == 5) writefile(todo, index);
+                if(menu_num == 5) writefile(todo);
 //                 if(menu_num == 6) searchname(todo);
                 if(menu_num == 7)
                     searchuserid(todo);
