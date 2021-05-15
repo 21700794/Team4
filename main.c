@@ -15,7 +15,6 @@ int main()
    
     if(fileopen(flag))
         index = count = fileread(todo);
-    //printf("%d %d\n", index, count);
     flag=1;
 
         do{
