@@ -3,7 +3,6 @@
 #include"s21700794.h"
 
 #define SIZE 30
-
 int main()
 {
     Todolist todo[SIZE];  
@@ -18,13 +17,7 @@ int main()
         index = count = fileread(todo);
     //printf("%d %d\n", index, count);
     flag=1;
- /*    
-       
-    #ifdef DEBUG
-            printf("실행??");
-    #endif
 
-*/
         do{
                 menu_num = menu();
                 if(menu_num == 0) break;
