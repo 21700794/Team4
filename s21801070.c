@@ -53,7 +53,7 @@ int fileread(Todolist * list)
                 count+=1;  //마지막에 count 되는게 방지됨.                      일고나서 count+1이 되는데 1번을 읽고 +1하기 전에 eof를 만나서
                
         }
-        printf("count : %d\n", count);
+        //printf("count : %d\n", count);
         return count+1;
 }
 

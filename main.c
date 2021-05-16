@@ -13,8 +13,10 @@ int main()
     
      memset(todo, -1, sizeof(todo));
    
-    if(fileopen(flag))
+    if(fileopen(flag)){
         index = count = fileread(todo);
+        printf("파일 불러오기 성공!\n");
+    }
     flag=1;
 
         do{
